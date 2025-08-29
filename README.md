@@ -5,21 +5,15 @@ Built with **Flask (Python)** for the backend and **HTML/CSS/JS** for the fronte
 
 The app takes the total payments made by each person, calculates who owes whom, and outputs the minimal set of transactions needed to settle the debts.
 
----
-
 ## ✨ Features
 - Enter the number of people and their payments.
 - Automatically compute who should pay whom.
 - Minimizes the number of transactions using **Mixed Integer Programming (MIP)**.
 - Clean and responsive interface.
 
----
-
 ## 🙏 Credits
 - The optimization formulation is based on the work of **Dr. Validi**.  
 - GitHub repo: [Dr. Validi’s repository](https://github.com/hamidrezavalidi/Expense-Splitting-Code)  
-
----
 
 ## 🚀 Execution
 
