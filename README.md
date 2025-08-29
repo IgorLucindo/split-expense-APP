@@ -17,14 +17,10 @@ The app takes the total payments made by each person, calculates who owes whom, 
 
 ## 🙏 Credits
 - The optimization formulation is based on the work of **Dr. Validi**.  
-- GitHub repo: [Dr.Validi’s repository](https://github.com/Validi)  
+- GitHub repo: [Dr. Validi’s repository](https://github.com/hamidrezavalidi/Expense-Splitting-Code)  
 
 ---
 
 ## 🚀 Execution
 
-### Local setup
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/expense-splitter.git
-   cd expense-splitter
+- Render: [Link to Website](https://split-expense-app-hvuz.onrender.com)
