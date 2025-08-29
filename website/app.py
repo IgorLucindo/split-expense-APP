@@ -18,10 +18,9 @@ def index():
 @app.route('/solve', methods=['POST'])
 def solve():
     data = request.json
-    num_people = int(data['num_people'])
     payments = [float(p) for p in data['payments']]
 
-    transactions = minimize_transactions(num_people, payments)
+    transactions = minimize_transactions(payments)
     return jsonify({'transactions': transactions})
 
 
