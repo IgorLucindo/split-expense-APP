@@ -1,12 +1,13 @@
 import pulp
+import numpy as np
 
 
 def minimize_transactions(payments):
     M = sum(abs(p) for p in payments)
 
     # Separate debtors and creditors
-    debtors = [(i, -p) for i, p in enumerate(payments) if p < 0]
-    creditors = [(i, p) for i, p in enumerate(payments) if p > 0]
+    debtors = [(i, -p+np.mean(payments)) for i, p in enumerate(payments) if p < 0]
+    creditors = [(i, p-np.mean(payments)) for i, p in enumerate(payments) if p > 0]
 
     if not debtors and not creditors:
         return []  # Already settled

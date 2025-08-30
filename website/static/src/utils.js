@@ -4,8 +4,8 @@ function generateInputs() {
     for (let i = 1; i <= num; i++) {
         html += `
             <div class="form-row">
-                <label>Person ${i} paid:</label>
-                <input type="number" class="payment" value="0" step="0.01">
+                <label>Person ${i} balance:</label>
+                <input type="number" class="payment" step="0.01">
             </div>
         `;
     }

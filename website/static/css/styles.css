@@ -12,9 +12,11 @@ body {
     max-width: 600px;
     margin: 0 auto;
     background: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Headings */
@@ -93,4 +95,41 @@ button:hover {
     max-width: 400px;
     text-align: center;
     color: #2c3e50;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .form-row label {
+        width: 100%;      /* full width */
+        text-align: left; /* better on small screens */
+        margin-bottom: 0.3rem;
+    }
+
+    .form-row input {
+        flex: 1;
+        width: 100%;      /* expand to full width */
+        text-align: left;
+    }
+
+    #results {
+        max-width: 100%;  /* allow shrinking */
+        font-size: 0.95rem;
+    }
+
+    button {
+        width: 100%;      /* stack buttons */
+        margin: 0.3rem 0;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
