@@ -3,11 +3,16 @@ import numpy as np
 
 
 def minimize_transactions(payments):
-    M = sum(abs(p) for p in payments)
-
-    # Separate debtors and creditors
-    debtors = [(i, -p+np.mean(payments)) for i, p in enumerate(payments) if p < 0]
-    creditors = [(i, p-np.mean(payments)) for i, p in enumerate(payments) if p > 0]
+    """
+    This function minimizes the number of transactions required to settle debts among a group of people.
+    It takes a list of payments (amounts paid by each person) and returns a list of transactions.
+    Each transaction specifies who pays whom and the amount.
+    """
+    balances = [p - np.mean(payments) for p in payments]
+    debtors = [(i, -b) for i, b in enumerate(balances) if b < 0]
+    creditors = [(i, b) for i, b in enumerate(balances) if b > 0]
+    M = max(max((d for _, d in debtors), default=0),
+        max((c for _, c in creditors), default=0))
 
     if not debtors and not creditors:
         return []  # Already settled
